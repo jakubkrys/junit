@@ -17,4 +17,16 @@ public class ValidatorTest {
         //then
         assertFalse(isValid);
     }
+
+    @Test
+    public void isNotValidIfLength11(){
+        //given
+        String pesel = "15119952648";
+
+        //when
+        boolean isValid = Validator.peselValidation(pesel);
+
+        //then
+        assertTrue(isValid);
+    }
 }
