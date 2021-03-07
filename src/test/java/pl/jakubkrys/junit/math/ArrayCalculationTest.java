@@ -125,4 +125,44 @@ public class ArrayCalculationTest {
         //then
         assertNotEquals(3, avg);
     }
+
+    @Test
+    public void medianValueIs5(){
+        //given
+        int[] tab = {1,2,3,4,5,6,7,8,9};
+        //when
+        double med = ArrayCalculation.med(tab);
+        //then
+        assertEquals(5, med);
+    }
+
+    @Test
+    public void medianValueIsNot92199(){
+        //given
+        int[] tab = {1283,1283,21275,92199,1000,14};
+        //when
+        double med = ArrayCalculation.med(tab);
+        //then
+        assertNotEquals(92199, med);
+    }
+
+    @Test
+    public void medianValueIs1283(){
+        //given
+        int[] tab = {1283,1283,21275,92199,1000,14};
+        //when
+        double med = ArrayCalculation.med(tab);
+        //then
+        assertEquals(1283, med);
+    }
+
+    @Test
+    public void medianValueIs50Comma5(){
+        //given
+        int[] tab = {12,23,34,45,56,67,78,89,91,-5};
+        //when
+        double med = ArrayCalculation.med(tab);
+        //then
+        assertEquals(50.5, med);
+    }
 }
