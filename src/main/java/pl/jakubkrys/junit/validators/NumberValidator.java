@@ -1,4 +1,4 @@
-package pl.jakubkrys.junit;
+package pl.jakubkrys.junit.validators;
 
 public class NumberValidator {
 

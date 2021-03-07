@@ -1,6 +1,7 @@
-package pl.jakubkrys.junit;
+package pl.jakubkrys.junit.validators;
 
 import org.junit.jupiter.api.Test;
+import pl.jakubkrys.junit.validators.NumberValidator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -10,13 +11,10 @@ public class NumberValidatorTest {
     public void isValidIfLengthIs3() {
         //given
         int number = 451;
-
         //when
         boolean isValid = NumberValidator.numberLengthValidation(number);
-
         //then
         assertTrue(isValid);
-
     }
 
     @Test

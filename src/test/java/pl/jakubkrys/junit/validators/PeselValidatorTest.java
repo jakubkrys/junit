@@ -1,6 +1,7 @@
-package pl.jakubkrys.junit;
+package pl.jakubkrys.junit.validators;
 
 import org.junit.jupiter.api.Test;
+import pl.jakubkrys.junit.validators.PeselValidator;
 
 import static org.junit.jupiter.api.Assertions.*;
 
