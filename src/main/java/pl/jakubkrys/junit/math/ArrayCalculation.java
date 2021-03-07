@@ -11,4 +11,14 @@ public class ArrayCalculation {
         }
         return min;
     }
+
+    public static int max(int[] tab) {
+        int max = tab[0];
+        for (int value : tab) {
+            if (value > max){
+                max = value;
+            }
+        }
+        return max;
+    }
 }
