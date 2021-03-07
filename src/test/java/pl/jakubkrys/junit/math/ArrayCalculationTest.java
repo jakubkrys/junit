@@ -85,4 +85,44 @@ public class ArrayCalculationTest {
         //then
         assertNotEquals(1000, max);
     }
+
+    @Test
+    public void avgOf1111IsNot2(){
+        //given
+        int[] tab = {1,1,1,1,1};
+        //when
+        double avg = ArrayCalculation.avg(tab);
+        //then
+        assertNotEquals(2, avg);
+    }
+
+    @Test
+    public void avgValueIs5(){
+        //given
+        int[] tab = {1,2,3,4,5,6,7,8,9};
+        //when
+        double avg = ArrayCalculation.avg(tab);
+        //then
+        assertEquals(5, avg);
+    }
+
+    @Test
+    public void avgOf24and42Is33(){
+        //given
+        int[] tab = {24,42};
+        //when
+        double avg = ArrayCalculation.avg(tab);
+        //then
+        assertEquals(33, avg);
+    }
+
+    @Test
+    public void avgOf24and42IsNot3(){
+        //given
+        int[] tab = {24,42};
+        //when
+        double avg = ArrayCalculation.avg(tab);
+        //then
+        assertNotEquals(3, avg);
+    }
 }

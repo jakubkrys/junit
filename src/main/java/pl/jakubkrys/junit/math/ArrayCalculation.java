@@ -21,4 +21,13 @@ public class ArrayCalculation {
         }
         return max;
     }
+
+    public static double avg(int[] tab) {
+        int sum = 0;
+        for (int value : tab) {
+            sum = sum + value;
+        }
+        double avg = sum/ tab.length;
+        return avg;
+    }
 }
