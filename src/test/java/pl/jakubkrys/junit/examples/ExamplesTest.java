@@ -13,6 +13,6 @@ public class ExamplesTest {
         //when
 boolean isAdult = Examples.isAdult(age);
         //then
-        assertTrue(isAdult);
+        assertFalse(isAdult);
     }
 }
