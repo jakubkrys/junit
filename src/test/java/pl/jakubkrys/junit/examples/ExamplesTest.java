@@ -1,5 +1,6 @@
 package pl.jakubkrys.junit.examples;
 
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -23,5 +24,11 @@ public class ExamplesTest {
     @CsvSource({"0, 1, 1","1, 2, 3","3, 5, 8"})
     public void firstPlusSecondEqualsThird(int a, int b, int expectedResult){
         assertEquals(expectedResult, Examples.sum(a,b));
+    }
+
+    @RepeatedTest(100)
+    public void isFrom5To100(){
+        int number = Examples.randFrom5To100();
+        assertTrue(number >= 5 && number <= 100);
     }
 }
