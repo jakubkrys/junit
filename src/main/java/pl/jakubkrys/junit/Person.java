@@ -9,4 +9,8 @@ public class Person {
         this.name = name;
         this.pesel = pesel;
     }
+
+    public String getYearFromPesel(){
+        return "19"+pesel.substring(0,2);
+    }
 }
