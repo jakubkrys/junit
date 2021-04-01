@@ -11,6 +11,10 @@ public class Person {
     }
 
     public String getYearFromPesel(){
-        return "19"+pesel.substring(0,2);
+        if (Integer.parseInt(pesel.substring(2,3)) >= 2){
+            return "20"+pesel.substring(0,2);
+        } else {
+            return "19"+pesel.substring(0,2);
+        }
     }
 }

@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PersonTest {
 
     @ParameterizedTest(name = "{0} was born in {2}")
-    @CsvSource({"Jurek,88092734012,1988","Kasia,63122400987,1963","Gracjan,39090142372,1939"})
+    @CsvSource({"Jurek,88092734012,1988","Kasia,63122400987,1963","Gracjan,39090142372,1939","Xavier,12321287099,2012"})
     public void isCorrectYear(String name, String pesel, String year){
         //given
         Person person = new Person(name, pesel);
@@ -20,7 +20,7 @@ public class PersonTest {
     }
 
     @ParameterizedTest(name = "{0} was not born in {2}")
-    @CsvSource({"Bożena,88092734012,1945","Józef,63122400987,1964","Elżbieta,45090142372,1939"})
+    @CsvSource({"Bożena,88092734012,1945","Józef,63122400987,1964","Elżbieta,45090142372,1939","Jan,05262909111,1905"})
     public void isIncorrectYear(String name, String pesel, String year){
         //given
         Person person = new Person(name, pesel);
