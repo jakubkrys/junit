@@ -1,21 +1,27 @@
 package pl.jakubkrys.junit;
 
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CarPlateTest {
 
-    @Test
-    public void isPlateCorrect() {
+    @RepeatedTest(10)
+    public void areLettersCorrect() {
+        String plate = CarPlate.randomPlate();
+        assertTrue(((plate.substring(0,2)).matches("[A-Z]*")));
+    }
+
+    @RepeatedTest(10)
+    public void areDigitsCorrect() {
         //g
         String plate = CarPlate.randomPlate();
-        //w
+        assertTrue(plate.substring(2).matches("[0-9]*"));
+    }
 
-        //t
-        System.out.println(plate.substring(0,2));
-        System.out.println(plate.substring(2));
-        System.out.println(plate.substring(0,2).matches("A-Z"));
-        System.out.println(plate.substring(2).matches("0-9"));
-        assertTrue((plate.substring(0,2).toUpperCase().matches("A-Z")) && (plate.substring(2).matches("0-9")));
+    @RepeatedTest(10)
+    public void isPlateCorrect() {
+        String plate = CarPlate.randomPlate();
+        assertTrue(((plate.substring(0,2)).matches("[A-Z]*")) && (plate.substring(2).matches("[0-9]*")));
     }
 }
